@@ -1,0 +1,11 @@
+-La carte de développement IR fonctionne avec l'oscillateur interne de l'ATMEGA328 à 8MHz. 
+-Dans l'IDE Arduino il faut utiliser le type de carte "Arduino Nano" avec le processeur "ATMEGA328". Malheureusement,
+par défaut, celui-ci est cadencé à 16MHZ.
+-Il est donc nécessaire de modifier le fichier de configuration "board.txt" qui se trouve dans ...\Arduino\hardware\arduino\avr\board.txt
+-Il faut alors modifier la ligne 136 suivante :
+                nano.build.f_cpu=16000000L
+en:
+                nano.build.f_cpu=8000000L
+-Il est alors nécessaire de redémarrer l'IDE pour que la modification soit prise en compte.
+
+-Ne pas oublier de remettre la bonne valeur si vous souhaitez programmer une carte Arduino Nano.
