@@ -2,3 +2,4 @@
 par rapport à un Arduino UNO)
 -Dans le terminal série, il faut diviser la vitesse de transmission par deux par rapport à celle mise dans le programme (je n'ai pas encore
 l'explication, est ce que cela vient du FTDI ?)
+-explication du problème, la platine de développement utilise l'oscillateur interne (pas de quartz) cadancé à 8Mhz. Alors que la uno utilise un quartz externe à 16Mhz
